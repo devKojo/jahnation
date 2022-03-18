@@ -1,0 +1,530 @@
+/* Styles
+1. Strutural styles
+2. media styles
+3. custom styles
+4. form control styles
+5. mobile   
+
+*/
+
+/* 1. Strutural styles */
+
+@font-face {
+  font-family: SensationLight;
+  src: url("../font/Sansation_Light.ttf");
+}
+@font-face {
+  font-family: LeagueGothic;
+  src: url(../font/LeagueGothic-Regular-VariableFont_wdth.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+:root {
+  --black: rgb(53, 53, 53);
+  --dark: rgb(0, 0, 0);
+  --white: rgb(235, 235, 235);
+  --text-grey: rgb(121, 121, 121);
+  --yellow: rgb(243, 227, 4);
+  --lighgrey: #fcfcfc;
+  --green: rgb(0, 255, 255);
+}
+nav {
+  display: flex;
+  width: 100%;
+  height: 4rem;
+  align-items: center;
+  color: var(--black);
+  position: fixed;
+  z-index: 2;
+}
+nav li {
+  display: inline;
+  padding-left: 2rem;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: SensationLight;
+}
+.footer-top {
+  width: 100%;
+  height: auto;
+  background-color: rgb(10, 10, 10);
+  display: flex;
+}
+.footer-top > div {
+  width: 50%;
+  height: 100%;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: right;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+}
+.footer-top p {
+  font-size: 1.2rem;
+  line-height: 2;
+}
+.footer-top h2 {
+  font-family: LeagueGothic;
+  font-size: 6rem;
+  color: var(--text-grey);
+}
+.map-section {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: left;
+}
+.map-section iframe {
+  padding-left: 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 8px;
+}
+footer {
+  width: 100%;
+  height: 4rem;
+  background-color: var(--dark);
+  color: var(--white);
+  font-size: 0.8rem;
+  margin: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 1rem;
+}
+a:link,
+a:visited,
+a:active {
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ------------------------------------ */
+/* 2. media styles */
+.nav-desktop {
+  background-color: var(--dark);
+  color: var(--white);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.site-logo-container {
+  width: 4rem;
+  height: 4rem;
+  margin-left: 2rem;
+}
+.site-logo {
+  width: 100%;
+  height: 100%;
+}
+
+.site-logo-container-mobile {
+  display: none;
+}
+.nav-items-mobile {
+  display: none;
+}
+
+/* ------------------------------------ */
+/* 3. custom styles */
+.divider-empty-column {
+  display: inline-flex;
+  width: 30%;
+  flex-shrink: 1;
+}
+
+.hero {
+  width: 100%;
+  height: 36rem;
+  background-image: url("../img/hero-2.jpeg");
+  background-attachment: fixed;
+  z-index: 0;
+}
+.hero-caption {
+  width: 28rem;
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  color: var(--white);
+}
+.hero-caption h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+}
+.hero-caption h1::after {
+  content: " .";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  color: var(--yellow);
+}
+.hero-caption p {
+  padding-top: 1rem;
+}
+.hero-feature-section {
+  width: 480px;
+  height: 420px;
+  background-color: var(--white);
+  position: absolute;
+  left: 55%;
+  top: 15%;
+  text-align: center;
+  animation-name: scroll-in-left;
+  animation-duration: 2s;
+}
+@keyframes scroll-in-left {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 55%;
+  }
+}
+
+.hero-feature-section h2,
+p {
+  padding: 0.5rem;
+}
+.hero-feature-section img {
+  width: 100%;
+  height: 60%;
+}
+.services-section-title-mobile {
+  display: none;
+}
+.subscription-area {
+  width: 100%;
+  height: 120px;
+  background-color: aqua;
+}
+
+/* ------------------------------------ */
+/* 4. grid system */
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col-60,
+col {
+  display: inline-block;
+  width: 60%;
+  height: auto;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+.col {
+  width: 40%;
+  height: auto;
+  margin-left: 2rem;
+  text-align: center;
+}
+.col h2 {
+  font-family: LeagueGothic;
+  font-size: 6rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  padding-top: 3rem;
+  color: var(--black);
+}
+.col p {
+  padding-bottom: 3rem;
+}
+.inner-flex-items > div {
+  display: inline-block;
+  width: 220px;
+  min-height: 220px;
+  margin: 1rem;
+  padding: 2rem;
+  color: var(--text-grey);
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.inner-flex-items > div img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+.services-section h2::after,
+.section-title h2::after {
+  content: ".";
+  color: var(--yellow);
+}
+div.section-title {
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  padding-top: 3rem;
+}
+.section-title h2 {
+  display: block;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  padding-top: 3rem;
+  font-family: LeagueGothic;
+  font-size: 6rem;
+  color: var(--black);
+}
+.section-title p {
+  display: block;
+  padding-bottom: 4rem;
+}
+.media-card {
+  width: 240px;
+  height: 260px;
+  background-color: var(--text-grey);
+  margin: 1rem;
+}
+.works-section {
+  margin-bottom: 10rem;
+}
+.feature-video {
+  width: 100%;
+  height: 400px;
+  padding-top: 2rem;
+  background-color: var(--dark);
+}
+.about-section {
+  width: 100%;
+  min-height: 760px;
+  background-color: var(--lighgrey);
+  margin: 2rem 0px;
+}
+.vision,
+.mission {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 800;
+}
+.vision {
+  margin-top: 1rem;
+  border-top: 2px solid var(--yellow);
+  border-left: 2px solid var(--yellow);
+}
+.vision-text {
+  position: absolute;
+  width: 220px;
+  left: 23%;
+  font-size: 1.4rem;
+}
+.mission {
+  border-top: 2px solid var(--yellow);
+  border-right: 2px solid var(--yellow);
+}
+.mission-text {
+  position: absolute;
+  width: 380px;
+  right: 10%;
+  font-size: 1.2rem;
+}
+
+/* 4. form control styles */
+.subscribe-input-text,
+.subscribe-input-button,
+.button-primary,
+.button-secondary {
+  width: 260px;
+  height: 40px;
+  border: unset;
+  outline: unset;
+  text-align: center;
+}
+.subscribe-input-button,
+.button-primary,
+.button-secondary {
+  width: 120px;
+  background-color: var(--dark);
+  color: var(--white);
+  cursor: not-allowed;
+  font-size: 1rem;
+}
+.subscribe-input-button {
+  font-weight: 800;
+}
+.newsletter-subscription {
+  padding: 2rem;
+}
+.newsletter-subscription h3 {
+  font-size: 2rem;
+  margin: 1rem;
+}
+.button-primary,
+.button-inverse,
+.button-secondary {
+  width: 200px;
+}
+.button-primary {
+  background-color: var(--black);
+  color: var(--white);
+}
+.button-inverse {
+  background-color: unset;
+  border: 1px solid var(--black);
+  padding: 0.5rem;
+  cursor: not-allowed;
+}
+
+/* ------------------------------------ */
+/* mobile */
+/* ------------------------------------ */
+@media only screen and (max-width: 780px) {
+  body {
+    font-family: SensationLight;
+  }
+  .nav-desktop {
+    display: none;
+  }
+  .site-logo-container {
+    display: none;
+  }
+  .site-logo-container-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-items {
+    display: none;
+  }
+  .services-section {
+    display: none;
+  }
+  .col-60,
+  col {
+    display: block;
+    width: 100%;
+  }
+  .inner-flex-items > div {
+    width: 100%;
+    height: auto;
+  }
+  .media-card {
+    width: 100%;
+    height: 260px;
+    display: block;
+    background-color: var(--text-grey);
+    margin: 1rem;
+  }
+  .flex-container {
+    width: 90%;
+    display: block;
+  }
+  .mission-text {
+    position: absolute;
+    width: 280px;
+    right: 22%;
+    font-size: 1.2rem;
+  }
+  .services-section-title-mobile {
+    display: block;
+    max-width: 700px;
+    text-align: center;
+  }
+  .services-section-title-mobile h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    padding-top: 3rem;
+  }
+  .services-section-title-mobile p {
+    width: 220px;
+    margin: 0 auto;
+  }
+  .hero-caption h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+  }
+  .subscribe-input-text,
+  .subscribe-input-button {
+    width: 260px;
+    height: 40px;
+    border: unset;
+    outline: unset;
+    text-align: center;
+  }
+  .subscription-area {
+    width: 100%;
+    height: 260px;
+    background-color: aqua;
+    margin-bottom: -1rem;
+  }
+  .hero-feature-section {
+    display: none;
+  }
+  .vision,
+  .mission {
+    width: 250px;
+    height: 250px;
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  .vision-text {
+    left: 28%;
+  }
+  .about-section {
+    width: 100%;
+    height: 740px;
+    background-color: var(--lighgrey);
+    margin: 2rem 0px;
+    padding: 0.2rem 0px;
+  }
+  .mission-text {
+    right: 25%;
+  }
+  .about-section h3 {
+    padding: 1rem 0px;
+  }
+  .footer-top {
+    width: 100%;
+    margin-bottom: -1rem;
+    background-color: rgb(10, 10, 10);
+    display: block;
+  }
+  .map-section {
+    display: block;
+  }
+  .map-section iframe {
+    width: 25rem;
+    height: auto;
+    padding: 0;
+  }
+  .footer-top .contact-info {
+    display: block;
+    width: 400px;
+    margin-left: 2rem;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .buttton-secondary,
+  .button-primary {
+    display: block;
+    margin-top: 1rem;
+  }
+}
